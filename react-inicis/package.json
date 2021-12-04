@@ -1,12 +1,9 @@
 {
-  "name": "@sjh/react-inicis",
-  "version": "0.0.1",
-  "main":"./src/inicis/reactInicis.js",
-  "module": "./src/inicis/reactInicis.js",
+  "name": "@hellojh/react-inicis",
+  "version": "0.0.2",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.15.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -16,7 +13,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "publish:npm": "rm -rf dist && mkdir dist && babel src/lib -d dist --copy-files"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +37,11 @@
   "devDependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/preset-react": "^7.16.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
   }
 }
