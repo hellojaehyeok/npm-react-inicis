@@ -16,7 +16,7 @@
 
 ## Installation
 ```
-npm install @@hellojh/react-inicis
+npm install @hellojh/react-inicis
 ```
 
 <br /><br />
@@ -60,9 +60,9 @@ const payData = {
     buyerName:"sjh",
     buyerTel:"01011112222",
     buyerEmail:"test@test.com",
-    payStatus:0, 
+    payStatus:2, 
     returnUrl:"http://localhost:3000",
-    closeUrl:"http://localhost:3000/closeInicis",
+    closeUrl:"http://localhost:3000/close",
     telStatus:1,
     mKey:"---",
     mid:"---",
@@ -75,13 +75,15 @@ const payData = {
 도메인 앞에 www도 신경 써주셔야하며 포트 번호 또한 주의하셔야합니다.       
 
 로컬에서 테스트를 할 때는 실서버에 올려 포트 번호를 숨긴 다음        
-`실서버:서버포트번호`로 returnUrl을 넣습니다.
+`실서버:서버포트번호`로 returnUrl을 넣습니다.      
+       
+백엔드는 리턴받은 데이터를 분기처리 후 프론트쪽으로 리디렉션 시켜줍니다.    
 
 <br />
 
 * closeUrl
 
-이니시스 결제창을 닫기 위한 페이지를 만들어 줍니다.
+이니시스 결제창을 닫기 위한 페이지를 만들어 줍니다.       
 `return문` 안에 `<CloseInicis/>`를 불러와줍니다.
 ex)
 ```javascript
@@ -95,14 +97,14 @@ export default Close;
 
 ### isPurchase
 
-결제창을 활성화시키기 위한 props입니다.
-isPurchase 값이 true가 되는 순간 결제창이 나옵니다.
+결제창을 활성화시키기 위한 props입니다.      
+isPurchase 값이 증가 되는 순간 결제창이 나옵니다.      
 
 
 ### isTest
 
-테스트 환경일 때 true 값을 전달해 줍니다.
-이 환경에서는 payData의 mKey와 mid를 넣지 않아도 됩니다.
+테스트 환경일 때 true 값을 전달해 줍니다.        
+이 환경에서는 payData의 mKey와 mid를 넣지 않아도 됩니다.      
 
 
 <br /><br />
@@ -114,22 +116,22 @@ import React, {useState} from 'react';
 
 const Inicis = () => {
     
-    const [isPurchase, setIsPurchase] = useState(false);
+    const [isPurchase, setIsPurchase] = useState(0);
 
     const payData = {
         productName:"물건이름",
-        buyerName:"송재혁",
+        buyerName:"홍길동",
         buyerTel:"01011112222",
-        buyerEmail:"wakij6587@namever.com",
+        buyerEmail:"test@test.com",
         productPrice:1000,
         payStatus:0,
         returnUrl:"http://localhost:3000/",
-        closeUrl:"http://localhost:3000/Close",
+        closeUrl:"http://localhost:3000/close",
     }
 
     return(
         <div className="App">
-            <button onClick={() => setIsPurchase(true)}>결제</button>
+            <button onClick={() => setIsPurchase(isPurchase+1)}>결제</button>
             <ReactInicis payData={payData} isPurchase={isPurchase} isTest />
         </div>
     )
@@ -137,3 +139,7 @@ const Inicis = () => {
 
 export default Inicis;
 ```
+
+
+
+<strong>이 코드로 인해 발생되는 문제에 대하여는 책임지지 않습니다.</strong>

@@ -1,6 +1,6 @@
 {
   "name": "@hellojh/react-inicis",
-  "version": "0.1.4",
+  "version": "0.2.2",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "dependencies": {
@@ -37,6 +37,10 @@
   "devDependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/preset-react": "^7.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hellojaehyeok/npm-react-inicis"
   },
   "babel": {
     "presets": [
