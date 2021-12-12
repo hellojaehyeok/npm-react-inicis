@@ -2,6 +2,10 @@
 
 이니시스 홈페이지에는 javascript로 만들어진 개발 가이드가 없기 때문에 직접 만들어 구현하였습니다.
 
+![pc](https://user-images.githubusercontent.com/62782245/145717586-f99cb956-debd-4cd4-bb8e-b32b66266144.gif)
+
+<img src="https://user-images.githubusercontent.com/62782245/145717716-91c4b5a9-55e6-4dc5-9859-6d3b579d038a.gif" width="50%"/>
+
 
 ## Tutorial
 해당 라이브러리는 프론트엔드 쪽만 작성하였으며 백엔드 로직은 따로 구현해야 합니다.      
