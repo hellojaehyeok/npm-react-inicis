@@ -1,6 +1,6 @@
 # React KG Inicis
 
-이니시스 홈페이지에는 javascript로 만들어진 개발 가이드가 없기 때문에 직접 만들어 구현하였습니다.
+이니시스 홈페이지에는 React.js로 만들어진 개발 가이드가 없기 때문에 직접 만들어 구현하였습니다.
 
 ![pc](https://user-images.githubusercontent.com/62782245/145717586-f99cb956-debd-4cd4-bb8e-b32b66266144.gif)
 
