@@ -1,7 +1,15 @@
 # React KG Inicis
 
 이니시스 홈페이지에는 React.js로 만들어진 개발 가이드가 없기 때문에 직접 만들어 구현하였습니다.
+     
+사용하시면 깃허브에 ⭐ 한 번만 눌러주시면 감사하겠습니다!!      
+오류가 있거나 문의할게 있으면 Issues 혹은 이메일로 연락 부탁드립니다.   
 
+예제 코드 아래에서 확인 가능합니다.      
+https://github.com/hellojaehyeok/react-inicis-example        
+
+       
+       
 ![pc](https://user-images.githubusercontent.com/62782245/145717586-f99cb956-debd-4cd4-bb8e-b32b66266144.gif)
 
 <img src="https://user-images.githubusercontent.com/62782245/145717716-91c4b5a9-55e6-4dc5-9859-6d3b579d038a.gif" width="50%"/>
