@@ -7,6 +7,8 @@ const CloseInicis = (props) => {
         script.src =
           "https://stgstdpay.inicis.com/stdjs/INIStdPay_close.js";
         document.head.appendChild(script);
+
+        return ()=>document.head.removeChild(script);
     }, []);
 
     return(

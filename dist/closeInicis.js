@@ -18,6 +18,9 @@ var CloseInicis = function CloseInicis(props) {
     var script = document.createElement("script");
     script.src = "https://stgstdpay.inicis.com/stdjs/INIStdPay_close.js";
     document.head.appendChild(script);
+    return function () {
+      return document.head.removeChild(script);
+    };
   }, []);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null);
 };
