@@ -9,11 +9,11 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _SHA = _interopRequireDefault(require("../utils/SHA256"));
+var _SHA = _interopRequireDefault(require("../src/utils/SHA256"));
 
-var _makeTimeStamp = _interopRequireDefault(require("../utils/makeTimeStamp"));
+var _makeTimeStamp = _interopRequireDefault(require("../src/utils/makeTimeStamp"));
 
-var _randomStringFunc = _interopRequireDefault(require("../utils/randomStringFunc"));
+var _randomStringFunc = _interopRequireDefault(require("../src/utils/randomStringFunc"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
