@@ -8,26 +8,26 @@ const releaseURL = "https://stdpay.inicis.com/stdjs/INIStdPay.js";
 
 // PC 결제수단 반환
 const payServerText = (index) => {
-    if(index == 0){
+    if(index === 0){
         return "Card"; // 카드
-    }else if(index == 1){
+    }else if(index === 1){
         return "VBank"; // 무통장
-    }else if(index == 2){
+    }else if(index === 2){
         return "HPP"; // 핸드폰
-    }else if(index == 3){
+    }else if(index === 3){
         return "DirectBank"; // 계좌이체
     }
 }
 
 // Mobile 결제수단 반환
 const payServerTextMb = (index) => {
-    if(index == 0){
+    if(index === 0){
         return "CARD"; // 카드
-    }else if(index == 1){
+    }else if(index === 1){
         return "VBANK"; // 무통장
-    }else if(index == 2){
+    }else if(index === 2){
         return "MOBILE"; // 핸드폰
-    }else if(index == 3){
+    }else if(index === 3){
         return "BANK"; // 계좌이체
     }
 }
@@ -57,7 +57,7 @@ const ReactInicis = ({payData, isPurchase, isTest}) => {
             script.src = isTest?testURL:releaseURL;
             document.head.appendChild(script);
             script.onload = e => {
-                if( (navigator.appName == 'Netscape' && agt.indexOf('trident') != -1) || (agt.indexOf("msie") != -1) ||  agt.indexOf('edge')) {
+                if( (navigator.appName === 'Netscape' && agt.indexOf('trident') !== -1) || (agt.indexOf("msie") !== -1) ||  agt.indexOf('edge')) {
                     e.srcElement.ownerDocument.defaultView.INIStdPay.pay('SendPayForm_id');
                 }else{
                     e.path[3].defaultView.INIStdPay.pay('SendPayForm_id');
@@ -94,7 +94,7 @@ const ReactInicis = ({payData, isPurchase, isTest}) => {
                 <input type="hidden" readOnly name="version" value="1.0" /> 
                 <input type="hidden" readOnly name="currency" value="WON" /> 
                 
-                {payData.payStatus==2&&<input type="hidden" readOnly name="acceptmethod" value={`HPP(${payData.telStatus})`} />}
+                {payData.payStatus===2&&<input type="hidden" readOnly name="acceptmethod" value={`HPP(${payData.telStatus})`} />}
 
                 <input
                     type="hidden"
@@ -122,7 +122,7 @@ const ReactInicis = ({payData, isPurchase, isTest}) => {
                 <input type="text" readOnly name="P_UNAME" value={payData.buyerName}/> 
 
                 {/* 휴대폰결제 필수 [1:컨텐츠, 2:실물] */}
-                {payData.payStatus==2&&<input type="text" readOnly name="P_HPP_METHOD" value={payData.telStatus}/>}
+                {payData.payStatus===2&&<input type="text" readOnly name="P_HPP_METHOD" value={payData.telStatus}/>}
             </form> 
 
 
