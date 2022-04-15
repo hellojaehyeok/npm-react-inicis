@@ -37,26 +37,26 @@ var testURL = "https://stgstdpay.inicis.com/stdjs/INIStdPay.js";
 var releaseURL = "https://stdpay.inicis.com/stdjs/INIStdPay.js"; // PC 결제수단 반환
 
 var payServerText = function payServerText(index) {
-  if (index == 0) {
+  if (index === 0) {
     return "Card"; // 카드
-  } else if (index == 1) {
+  } else if (index === 1) {
     return "VBank"; // 무통장
-  } else if (index == 2) {
+  } else if (index === 2) {
     return "HPP"; // 핸드폰
-  } else if (index == 3) {
+  } else if (index === 3) {
     return "DirectBank"; // 계좌이체
   }
 }; // Mobile 결제수단 반환
 
 
 var payServerTextMb = function payServerTextMb(index) {
-  if (index == 0) {
+  if (index === 0) {
     return "CARD"; // 카드
-  } else if (index == 1) {
+  } else if (index === 1) {
     return "VBANK"; // 무통장
-  } else if (index == 2) {
+  } else if (index === 2) {
     return "MOBILE"; // 핸드폰
-  } else if (index == 3) {
+  } else if (index === 3) {
     return "BANK"; // 계좌이체
   }
 };
@@ -99,7 +99,7 @@ var ReactInicis = function ReactInicis(_ref) {
       document.head.appendChild(script);
 
       script.onload = function (e) {
-        if (navigator.appName == 'Netscape' && agt.indexOf('trident') != -1 || agt.indexOf("msie") != -1 || agt.indexOf('edge')) {
+        if (navigator.appName === 'Netscape' && agt.indexOf('trident') !== -1 || agt.indexOf("msie") !== -1 || agt.indexOf('edge')) {
           e.srcElement.ownerDocument.defaultView.INIStdPay.pay('SendPayForm_id');
         } else {
           e.path[3].defaultView.INIStdPay.pay('SendPayForm_id');
@@ -186,7 +186,7 @@ var ReactInicis = function ReactInicis(_ref) {
     readOnly: true,
     name: "currency",
     value: "WON"
-  }), payData.payStatus == 2 && /*#__PURE__*/_react.default.createElement("input", {
+  }), payData.payStatus === 2 && /*#__PURE__*/_react.default.createElement("input", {
     type: "hidden",
     readOnly: true,
     name: "acceptmethod",
@@ -241,7 +241,7 @@ var ReactInicis = function ReactInicis(_ref) {
     readOnly: true,
     name: "P_UNAME",
     value: payData.buyerName
-  }), payData.payStatus == 2 && /*#__PURE__*/_react.default.createElement("input", {
+  }), payData.payStatus === 2 && /*#__PURE__*/_react.default.createElement("input", {
     type: "text",
     readOnly: true,
     name: "P_HPP_METHOD",

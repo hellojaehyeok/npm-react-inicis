@@ -52,7 +52,7 @@ const ReactInicis = ({payData, isPurchase, isTest}) => {
 
         // PC
         if(body.offsetWidth > 1024){
-            var agt = navigator.userAgent.toLowerCase();
+            const agt = navigator.userAgent.toLowerCase();
             const script = document.createElement("script");
             script.src = isTest?testURL:releaseURL;
             document.head.appendChild(script);
